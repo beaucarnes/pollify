@@ -1,0 +1,14 @@
+  .container
+    - for(var i = 0; i < polls.length; i+3)
+      .row
+        .col-md-4
+          a(href='/poll?pollid='+polls[i].id)= polls[i].name
+          p= polls[i].totalVotes
+        - if (i+ 1 < polls.length)
+          .col-md-4
+            a(href='/poll?pollid='+polls[i+1].id)= polls[i+1].name
+            p= polls[i+1].totalVotes
+        - if (i + 2 < polls.length)
+          .col-md-4
+            a(href='/poll?pollid='+polls[i+2].id)= polls[i+2].name
+            p= polls[i+2].totalVotes

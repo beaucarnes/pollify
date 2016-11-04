@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  
+  .container    
+    .row
+      each poll in polls
+        .col-md-4.text-center
+          .panel.panel-default
+            .panel-heading
+              a(href='/poll?pollid='+poll.id)= poll.name
+            .panel-body
+              p Total votes:&nbsp;
+                =poll.totalVotes

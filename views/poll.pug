@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  block content
+    h1= poll.name
+    .container    
+      .row
+        .col-md-4.col-md-offset-2
+          canvas#skills(width='300', height='300')
+        .col-md-4
+          form.options(method="post" action="/vote")
+            input(type="hidden" name="pollid" value=poll.id)
+            - if (poll.options.length)
+              -for (var i = 0; i < poll.options.length; i++)
+                +radio(i, poll.options[i].optionName)
+                p= poll.options[i].votes
+            button.btn.btn-default.center-block(type='submit') Vote!
+      
+mixin radio(value, name)
+  input(type='radio', name='option', value=value)
+  !=name
