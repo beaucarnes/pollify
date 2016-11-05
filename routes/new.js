@@ -14,7 +14,6 @@ function isLoggedIn (req, res, next) {
 /* GET form. */
 router.get('/', isLoggedIn, function(req, res) {
   Poll.find(function(err, polls){
-    console.log(polls)
     res.render(
       'new',
       {title : 'New Poll', polls : polls, logged: true}

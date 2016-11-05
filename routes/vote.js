@@ -6,7 +6,11 @@ var Poll = mongoose.model('polls');
 
 /* POST form. */
 router.post('/', function(req, res) {
+  if (typeof req.session.pollsVoted === 'undefined') {
+  req.session.pollsVoted = [];
+  }
   var optionvote = 'options[' + req.body.option + '].votes';
+  req.session.pollsVoted.push(req.body.pollid);
   Poll.findById(req.body.pollid, function(err,doc){
       if (err) {
         console.log("Error!!!!" + err);
@@ -18,7 +22,6 @@ router.post('/', function(req, res) {
         //save the model
         doc.save();
 });
-
   res.redirect('/poll?pollid='+req.body.pollid);
 });
 

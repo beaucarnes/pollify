@@ -6,27 +6,12 @@ block content
       fieldset
         h1.text-center New Poll
         .form-group
-          label.col-md-4.control-label(for='name') Name of Poll
+          label.col-md-4.control-label(for='name') Title of Poll
           .col-md-5
-            input#name.form-control.input-md(name='name', type='text', placeholder='', required='')
+            input#name.form-control.input-md(name='name', type='text', placeholder='', required)
         .form-group
           label.col-md-4.control-label(for='options') Options (separated by line)
           .col-md-5
-            textarea#options.form-control(name='options')
-        .form-group
-          label.col-md-4.control-label(for='chart') Chart Type
-          .col-md-4
-            .radio
-              label(for='chart-0')
-                input#chart-0(type='radio', name='chart', value='bar', checked='checked')
-                | 				      Bar
-            .radio
-              label(for='chart-1')
-                input#chart-1(type='radio', name='chart', value='donut')
-                | 				      Donut
-            .radio
-              label(for='chart-2')
-                input#chart-2(type='radio', name='chart', value='pie')
-                | 				      Pie
+            textarea#options.form-control(name='options' rows='4' required)
         .text-center
           button.btn.btn-default.center-block(type='submit') Create!

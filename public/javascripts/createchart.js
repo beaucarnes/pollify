@@ -2,13 +2,23 @@ var chartData = {
     labels: [],
     datasets: [
         {
-            label: "My First dataset",
+            label: "Poll",
             backgroundColor: ['rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.8)',
                 'rgba(255, 206, 86, 0.8)',
                 'rgba(75, 192, 192, 0.8)',
                 'rgba(153, 102, 255, 0.8)',
-                'rgba(255, 159, 64, 0.8)'],
+                'rgba(255, 159, 64, 0.8)',
+                'rgba(55, 99, 132, 0.8)',
+                'rgba(154, 62, 235, 0.8)',
+                'rgba(155, 206, 86, 0.8)',
+                'rgba(175, 192, 192, 0.8)',
+                'rgba(253, 102, 255, 0.8)',
+                'rgba(154, 62, 35, 0.8)',
+                'rgba(55, 70, 186, 0.8)',
+                'rgba(175, 102, 92, 0.8)',
+                'rgba(253, 152, 55, 0.8)',
+                'rgba(155, 109, 164, 0.8)'],
             strokeColor: "rgba(220,220,220,0.8)", 
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
@@ -37,14 +47,13 @@ var myPieChart = new Chart(ctx,{
     options: options
 });
     
-    console.log(data);
     
   } else {
-    // We reached our target server, but it returned an error
+    console.log("There is an error.")
   }
 };
 request.onerror = function() {
-  // There was a connection error of some sort
+  console.log("There is an error.")
 };
 request.send();
 

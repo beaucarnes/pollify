@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('/images/squared_metal.png')
 }
@@ -22,7 +21,27 @@ h1 {
   margin: 3px;
 }
 
+.panel-body {
+  background:#e0ebeb;
+  
+}
+
 .footer {
   margin-top: 20px;
   font-size: 10px;
+}
+
+
+.voting-choices {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+.choice {
+    list-style-type: none;
+    text-align: left;
+    display: inline-block;
+    *display: inline;
+    zoom: 1
 }

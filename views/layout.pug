@@ -9,7 +9,7 @@ html
 
 
   body
-    .navbar.navbar-inverse.navbar-fixed-top
+    .navbar.navbar-inverse.navbar-static-top
       .container
         .navbar-header
           a.navbar-brand.font(href='/') Pollify
@@ -28,5 +28,9 @@ html
               a(href='/auth/google') Login w/ Google
     block content
     .container.text-center.footer
-      p Created by Beau Carnes | View code on Github
-    
+      p
+        | Created by 
+        a(href='http://fruitful.software') Beau Carnes
+      p
+        a(href='https://github.com/beaucarnes/pollify') View code
+        |  on Github
