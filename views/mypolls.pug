@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .container  
+    h1.text-center My Polls
+    .row
+      each poll in polls
+        .col-md-4.text-center
+          .panel.panel-default
+            .panel-heading
+              a(href='/poll?pollid='+poll.id)= poll.name
+            .panel-body
+              a.btn.btn-primary.margin(roll='button' href='http://www.facebook.com/sharer.php?u=https://pollify-beaucarnes.c9users.io/poll?pollid='+poll.id)
+                i.fa.fa-facebook
+              a.btn.btn-info.margin(roll='button' href='https://twitter.com/intent/tweet?text=Check%20out%20my%20poll%20at%20Pollify!&url=https://pollify-beaucarnes.c9users.io/poll?pollid=581df2726e6b09007431af24'+poll.id+'&hashtags=Pollify')
+                i.fa.fa-twitter
+              a.btn.btn-danger.margin(roll='button' onclick="return confirm('Are you sure you want to delete the poll?')" href='/poll/delete?pollid='+poll.id)
+                i.fa.fa-trash 
+              

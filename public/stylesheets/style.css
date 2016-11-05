@@ -1,8 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/images/squared_metal.png')
 }
 
 a {
   color: #00B7FF;
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+}
+
+.font {
+  font-family: 'Bungee Shade', cursive;
+}
+
+.margin {
+  margin: 3px;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 10px;
 }

@@ -5,11 +5,8 @@ var Poll = mongoose.model('polls');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var loggedin = req.isAuthenticated()
-
-  Poll.find({}, function(err, polls) {
-    res.render('index', { polls: polls, logged: loggedin });
-  });
+  		req.logout();
+			res.redirect('/');
 });
 
 module.exports = router;

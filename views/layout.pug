@@ -1,25 +1,32 @@
 doctype html
 html
   head
-    title= title
+    title Pollify
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css')
 
-  .navbar.navbar-inverse.navbar-fixed-top
-    .container
-      .navbar-header
-        a.navbar-brand(href='/') Pollify
-      ul.nav.navbar-nav.navbar-right
-        li
-          a(href='/') Home
-        li
-          a(href='/new') New Poll
-        li
-          a(href='/mypolls') My Polls
-        li
-          a(href='/logout') Logout
+
 
   body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand.font(href='/') Pollify
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='/') Home
+          if logged
+            li
+              a(href='/new') New Poll
+            li
+              a(href='/mypolls') My Polls
+            li
+              a(href='/logout') Logout
+          else
+            li
+              a(href='/auth/google') Login w/ Google
     block content
-  script(src='/javascripts/Chart.min.js')
-  script(src='/javascripts/createchart.js')
+    .container.text-center.footer
+      p Created by Beau Carnes | View code on Github
+    
