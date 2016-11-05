@@ -57,14 +57,7 @@ request.onerror = function() {
 };
 request.send();
 
-
-
-
-
-
 var options = {
-  //  responsive : true
-
     
 };
 

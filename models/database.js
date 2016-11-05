@@ -23,4 +23,4 @@ Poll
 
 mongoose.model('polls', Poll);
 
-mongoose.connect('mongodb://localhost/database');
+mongoose.connect(process.env.MONGODB_URI);
