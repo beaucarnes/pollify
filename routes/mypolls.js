@@ -3,14 +3,13 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Poll = mongoose.model('polls');
 
-/* GET home page. */
-	function isLoggedIn (req, res, next) {
-		if (req.isAuthenticated()) {
-			return next();
-		} else {
-			res.redirect('/auth/google');
-		}
+function isLoggedIn (req, res, next) {
+	if (req.isAuthenticated()) {
+		return next();
+	} else {
+		res.redirect('/auth/google');
 	}
+}
 
 router.get('/', isLoggedIn, function(req, res, next) {
 

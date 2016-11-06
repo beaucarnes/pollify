@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var Poll = mongoose.model('polls');
 
 
-/* POST form. */
 router.post('/', function(req, res) {
   if (typeof req.session.pollsVoted === 'undefined') {
   req.session.pollsVoted = [];
@@ -25,7 +24,7 @@ router.post('/', function(req, res) {
   res.redirect('/poll?pollid='+req.body.pollid);
 });
 
-/* POST form. */
+
 router.get('/', function(req, res) {
   if (req.query.pollid)
   Poll.findById(req.query.pollid, function(err, poll){

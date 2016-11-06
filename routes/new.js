@@ -11,7 +11,6 @@ function isLoggedIn (req, res, next) {
 	}
 }
 
-/* GET form. */
 router.get('/', isLoggedIn, function(req, res) {
   Poll.find(function(err, polls){
     res.render(
@@ -21,7 +20,6 @@ router.get('/', isLoggedIn, function(req, res) {
   });
 });
 
-/* POST form. */
 router.post('/', isLoggedIn, function(req, res) {
   var optionsTemp = (req.body.options).split("\r\n");
   var optionsArray = [];

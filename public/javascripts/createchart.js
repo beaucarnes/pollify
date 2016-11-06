@@ -31,7 +31,7 @@ var request = new XMLHttpRequest();
 request.open('GET', '/vote?pollid=' + getParameterByName('pollid'), true);
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
-    // Success!
+
     var data = JSON.parse(request.responseText);
     
     for (var option of data.options) {

@@ -1,27 +1,13 @@
+## Pollify
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This app was created with Node.js, Express.js and MongoDB. It was created from
+scratch to fulfill the following user stories:
 
-
-Welcome to your Node.js project on Cloud9 IDE!
-
-This chat example showcases how to use `socket.io` with a static `express` server.
-
-## Running the server
-
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
-
-2) Alternatively you can launch the app from the Terminal:
-
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
-
-
-npm start
-
-mongod --smallfiles
+* As an authenticated user, I can keep my polls and come back later to access them.
+* As an authenticated user, I can share my polls with my friends.
+* As an authenticated user, I can see the aggregate results of my polls.
+* As an authenticated user, I can delete polls that I decide I don't want anymore.
+* As an authenticated user, I can create a poll with any number of possible items.
+* As an unauthenticated or authenticated user, I can see and vote on everyone's polls.
+* As an unauthenticated or authenticated user, I can see the results of polls in chart form. (This could be implemented using Chart.js or Google Charts.)
+* As an authenticated user, if I don't like the options on a poll, I can create a new option.
