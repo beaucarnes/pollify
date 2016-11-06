@@ -8,10 +8,11 @@ block content
         .form-group
           label.col-md-4.control-label(for='name') Title of Poll
           .col-md-5
-            input#name.form-control.input-md(name='name', type='text', placeholder='', required)
+            input#name.form-control.input-md(name='name', type='text', placeholder='Title', required)
         .form-group
           label.col-md-4.control-label(for='options') Options (separated by line)
           .col-md-5
-            textarea#options.form-control(name='options' rows='4' required)
+            textarea#options.form-control(name='options' rows='4' placeholder='First choice\nSecond choice' required)
         .text-center
           button.btn.btn-default.center-block(type='submit') Create!
+    script(src='/javascripts/placeholder.js')
