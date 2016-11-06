@@ -19,7 +19,8 @@ block content
                           +radio(i, ' '+poll.options[i].optionName)
                   button.btn.btn-default.center-block(type='submit') Vote!
               - else
-                p You have already voted on this poll!
+                p Thank you for voting on this poll!
+        a.btn.btn-default(roll='button' href='/') Back to Polls
     script(src='/javascripts/Chart.min.js')
     script(src='/javascripts/createchart.js')
       
