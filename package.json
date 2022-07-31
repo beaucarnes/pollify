@@ -9,7 +9,7 @@
     "body-parser": "~1.15.1",
     "chart.js": "^2.3.0",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
+    "debug": "~2.6.9",
     "express": "~4.13.4",
     "express-session": "^1.11.3",
     "mongoose": "^4.6.5",
