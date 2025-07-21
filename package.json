@@ -13,7 +13,7 @@
     "express": "~4.13.4",
     "express-session": "^1.11.3",
     "mongoose": "^4.6.5",
-    "morgan": "~1.7.0",
+    "morgan": "~1.10.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
     "passport-google-oauth20": "^1.0.0",
